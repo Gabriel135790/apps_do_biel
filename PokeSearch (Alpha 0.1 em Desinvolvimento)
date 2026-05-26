@@ -12,8 +12,18 @@ def procurar(pokemon, informacoes): # Procura o Nome do Pokemon que você escolh
         id_ = dados['id']
         experiencia_base = dados['base_experience']
         altura = dados['height'] + 'cm'
-        habilidades = dados['abilities']['ability']['name']
-    else:
-        print(Fore.RED + f'Erro! Código de Status é {resposta.status_code}')
+        habilidade = [habilidade['ability']['name'] for habilidade in dados['abilities']]
 
-procurar('Pikachu')
+        return {
+            'habilidades': habilidades,
+            'altura': altura,
+            'experiencia_base': experiencia_base,
+            'habilidade': habilidade
+    else:
+        print(Fore.RED + f'Erro! Código de Status é {resposta.status_code}, Por Favor Contacte o Desinvolvedor!')
+
+info = procurar('Pikachu')
+id_info = info['id_']
+altura_info = info['altura']
+experiencia_base_info = info['experiencia_base']
+habilidades_info = info['habilidade']
