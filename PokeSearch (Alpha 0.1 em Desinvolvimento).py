@@ -2,7 +2,7 @@ import requests
 import os
 from colorama import Fore, init
 init(autoreset=True)
-os.system('title PokeSearch (Versão Alpha 0.1)')
+os.system('title PokeSearch (Versão Alpha 0.1.2)')
 
 def procurar(pokemon): # Procura o Nome do Pokemon que você escolheu
     pokemon_format = pokemon.strip().lower()
