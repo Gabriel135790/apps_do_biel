@@ -22,7 +22,7 @@ def procurar(pokemon): # Procura o Nome do Pokemon que você escolheu
             'id': id_,
             'altura': altura,
             'experiencia_base': experiencia_base,
-            'habilidade': habilidade
+            'habilidade': ''.join(habilidade)
         }
     else:
         print(Fore.RED + f'Erro! Código de Status é {resposta.status_code}, Por Favor Contacte o Desinvolvedor!')
