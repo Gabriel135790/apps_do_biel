@@ -12,7 +12,7 @@ def procurar(pokemon): # Procura o Nome do Pokemon que você escolheu
         id_ = dados['id']
         experiencia_base = dados['base_experience']
         altura = dados['height']
-        habilidades_comuns = [
+        habilidade = [
             habilidade['ability']['name']
             for habilidade in dados['abilities']
             if not habilidade['is_hidden']
