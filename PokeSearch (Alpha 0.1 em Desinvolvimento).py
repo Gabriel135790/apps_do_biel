@@ -4,7 +4,7 @@ from colorama import Fore, init
 init(autoreset=True)
 os.system('title PokeSearch (Versão Alpha 0.1)'
 
-def procurar(pokemon, informacoes): # Procura o Nome do Pokemon que você escolheu
+def procurar(pokemon): # Procura o Nome do Pokemon que você escolheu
     pokemon_format = pokemon.strip().lower()
     resposta = requests.get(f'https://pokeapi.co/api/v2/pokemon/{pokemon_format}')
     if resposta.status_code == 200:
